@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <!-- Head -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+        <title>Eden Osman's Portfolio</title>
+        <link rel="shortcut icon" type="img/jpg" href="./Student_Portfolio/images/coding_icon.png">
+        <link rel="stylesheet" type="text/css" href="./Student_Portfolio/stylesheet/portfolio.css">
+    </head>
+
+    <!-- Body -->
+    <body class="Background">
+        
+        <!-- Navbar -->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <!-- Onclick and ondblclick functions addded to open & close the contact form -->
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
+        </div>
+
+        <!-- Background video -->
+        <div id="Home">
+            <video autoplay muted loop id="Typing_Video">
+                <source src="./Student_Portfolio/images/video/Typing.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!-- Video text -->
+        <div class="Video_Text">
+            <h1 class="white-text">Eden's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</q>
+                    <br> - Martin Fowler
+                    <br>
+                    <br> My name is Eden Osman. Welcome to my portfolio website. On it, you can read about my background and experience.
+                    <br>
+                    <br> Thank you for stopping by and enjoy! 
+                </p>
+            </strong>
+        </div>
+
+    <!-- Slideshow section -->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!-- Slide 1 of 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Student_Portfolio/images/me.jpg" alt="Me">
+                    <div class="text">I'm available to help you with your projects!</div>
+                </div>
+                <!-- Slide 2 of 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Student_Portfolio/images/HTMLCSSJS.jpg" alt="HTML, CSS, and JS Logos">
+                    <div class="text">I am a front-end developer<br> trained in:<br>HTML, CSS, and JavaScript.</div>
+                </div>
+                <!-- Slide 3 of 3 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="./Student_Portfolio/images/wdphoto.jpg" alt="Contact me now photo">
+                    <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                </div>
+
+                <!-- Previous & next buttons -->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br> <!-- Adds a space between the slideshow images and the dots -->
+
+            <!-- Slideshow dots -->
+            <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+        <!-- About section -->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="./Student_Portfolio/images/photo1.jpg" alt="" width="550px;" height="400px;">
+            </div>
+            <!--Right column-->
+            <div class="Column_1">
+                <h1>About Me</h1>
+                <p>
+                    I am currently enrolled on Pitman Training's Advanced Web Development Course and I am also working for Amazon BRS2 since 1st of June 2021, and thanks to this company, I started my journey in Web Development.
+                    <br>I started to learn programming on 1st of August 2022, and now I am trained on Web Development Basics, Version Control, HTML, CSS and Bootstrap.
+                    <br>
+                    <br>I am a future web developer and I would love to work with you in future on your projects. <a onclick="openForm()" class="contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p class="center">
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/edenosman" target="_blank">Eden Osman GitHub Profile</a></p>
+                </p>
+                <br>
+                <h1>LinkedIn</h1>
+                <p class="center">
+                    You can view my LinkedIn Profile here:
+                    <br>
+                    <p class="center"><a href="https://www.linkedin.com/in/eden-osman/" target="_blank">Eden Osman LinkedIn Profile</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/the-tech-academy" target="_blank"><img src="./Student_Portfolio/images/github.jpg" alt="GitHub Logo" width="550px;" height="400px;"></a>
+            </div>
+        </div>
+
+        <!--Contact form -->
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Type your name here" name="name" required>
+                    <label for="phone"><b>Phone</b></label>
+                        <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Type your email address here" name="email" required>
+                    <label for="message"><b>Message</b></label>
+                        <input type="text" placeholder="Type your message here" name="message">
+
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a>, 2023</p>
+                <br>
+            </p>
+        </footer>
+        <script src="./Student_Portfolio/JS/main.js"></script>
+    </body>
+</html>
